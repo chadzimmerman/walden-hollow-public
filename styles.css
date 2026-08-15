@@ -1,0 +1,1017 @@
+/* Self-hosted rather than linked from a font CDN. A third-party font request
+   sends every visitor's IP address to that provider on page load, which is a
+   poor look on a site whose pitch is that a private club's data stays private.
+   These are variable fonts, so one file covers every weight in use. */
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/librefranklin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("assets/fonts/playfair.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("assets/fonts/playfair-italic.woff2") format("woff2");
+}
+
+/* Walden Hollow marketing site
+   Palette derived from the app's own theme file so the site and the product
+   read as one thing. The app is dark; this is its daylight counterpart. */
+
+:root {
+  /* Ground. Pure white like the reference, with one warm stone band to break
+     long scrolls; a neutral warmed toward the gold, not a default grey. */
+  --ground: #ffffff;
+  --stone: #f5f3ee;
+  --rule: #e2ded5;
+
+  /* Ink carries a green bias, pulled down from the app's #0D1810 background so
+     type on white belongs to the same family as the app. */
+  --ink: #12211a;
+  --ink-soft: #4a5750;
+  --ink-mute: #7b857e;
+
+  /* Forest, for the dark bands. */
+  --forest: #16281e;
+  --forest-deep: #0d1810;
+  --forest-line: #2a3f32;
+
+  /* Green, the app's `success`. The interactive accent. */
+  --green: #4a7c59;
+  --green-deep: #355b41;
+
+  /* Gold. The app's #E0B457 sits at ~1.9:1 on white and is unusable for text
+     there, so it is reserved for dark grounds; --gold-ink is the darkened
+     counterpart that clears contrast on white. Same hue family, both legible. */
+  --gold: #e0b457;
+  --gold-ink: #8a6a2c;
+  --gold-wash: #f6efdf;
+
+  --serif: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Palatino,
+    Georgia, serif;
+  --sans: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --shell: 1200px;
+  --gutter: clamp(20px, 5vw, 64px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  /* Explicit: the page commits to one light identity, so it must paint its own
+     ground rather than borrowing whatever is behind it. */
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--green-deep);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- type ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4.3rem);
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  margin: 0;
+}
+
+.lede {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+}
+
+/* ---------- layout ---------- */
+
+.shell {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.band {
+  padding-block: clamp(64px, 9vw, 128px);
+}
+
+.band--stone {
+  background: var(--stone);
+}
+
+.band--forest {
+  background: var(--forest);
+  color: #ece7dc;
+}
+
+.band--forest h2,
+.band--forest h3 {
+  color: #fdfbf6;
+}
+
+.band--forest .eyebrow {
+  color: var(--gold);
+}
+
+.band--forest .lede {
+  color: #bcc5bd;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stack--tight {
+  gap: 12px;
+}
+
+.stack--loose {
+  gap: 32px;
+}
+
+/* ---------- nav ---------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: var(--ink);
+  margin-right: auto;
+}
+
+.brand img {
+  width: 34px;
+  height: auto;
+}
+
+.brand b {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav__links {
+  display: flex;
+  gap: 26px;
+}
+
+.nav__links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+.nav__links a:hover {
+  color: var(--green-deep);
+}
+
+@media (max-width: 860px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 26px;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.btn--primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--green-deep);
+}
+
+.btn--ghost {
+  border-color: var(--rule);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  border-color: var(--green);
+  color: var(--green-deep);
+}
+
+.btn--gold {
+  background: var(--gold);
+  color: var(--forest-deep);
+}
+
+.btn--gold:hover {
+  background: #eec570;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding-block: clamp(52px, 7vw, 96px) clamp(56px, 7vw, 104px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+@media (max-width: 940px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--green-deep);
+}
+
+.hero__rule {
+  width: 68px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* The dark panel is where the app's own world shows through on a light page. */
+.showcase {
+  position: relative;
+  background: var(--forest);
+  border-radius: 10px;
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.showcase::after {
+  /* The club mark, ghosted. An ornament that is actually the product's own. */
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -50px;
+  width: 300px;
+  height: 300px;
+  background: url("assets/fly.png") center / contain no-repeat;
+  opacity: 0.13;
+  pointer-events: none;
+}
+
+.phone {
+  width: min(232px, 46%);
+  aspect-ratio: 1320 / 2868;
+  background: var(--forest-deep);
+  border: 7px solid #060d09;
+  border-radius: 30px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  flex: none;
+}
+
+.phone--back {
+  transform: translateY(26px) scale(0.92);
+  opacity: 0.85;
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sits behind the screenshot. Visible only until the real assets are dropped
+   in, so an unbuilt site reads as unfinished rather than broken. */
+.phone::before {
+  content: attr(data-slot);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8d9a90;
+  background: repeating-linear-gradient(
+    45deg,
+    #16281e,
+    #16281e 9px,
+    #1c3125 9px,
+    #1c3125 18px
+  );
+}
+
+/* ---------- proof strip ---------- */
+
+.strip {
+  border-block: 1px solid var(--rule);
+  background: var(--stone);
+  padding-block: 26px;
+}
+
+.strip__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 44px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.strip span {
+  font-size: 0.85rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.strip b {
+  color: var(--gold-ink);
+}
+
+/* ---------- feature rows ---------- */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+.row + .row {
+  margin-top: clamp(56px, 8vw, 108px);
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .row__media {
+    order: -1;
+  }
+}
+
+.row--flip .row__media {
+  order: -1;
+}
+
+@media (max-width: 900px) {
+  .row--flip .row__media {
+    order: -1;
+  }
+}
+
+.row__media {
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  background: var(--stone);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.band--forest .panel {
+  background: var(--forest-deep);
+  border-color: var(--forest-line);
+}
+
+/* ---------- lists ---------- */
+
+.ticks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.ticks li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--ink-soft);
+}
+
+.ticks li::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-wash);
+}
+
+.band--forest .ticks li {
+  color: #bcc5bd;
+}
+
+.band--forest .ticks li::before {
+  box-shadow: 0 0 0 3px rgba(224, 180, 87, 0.14);
+}
+
+/* ---------- cards ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Four short cards otherwise wrap 3+1 and leave an orphan on the second row. */
+.cards--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .cards--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cards--four {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--ground);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.band--stone .card {
+  background: var(--ground);
+}
+
+.band--forest .card {
+  background: var(--forest-deep);
+  border-color: var(--forest-line);
+  color: #bcc5bd;
+}
+
+.card__mark {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--green);
+}
+
+.band--forest .card__mark {
+  background: var(--gold);
+}
+
+/* ---------- stage table ---------- */
+
+.stages {
+  border: 1px solid var(--forest-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 18px 22px;
+  align-items: baseline;
+}
+
+.stage + .stage {
+  border-top: 1px solid var(--forest-line);
+}
+
+.stage__n {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.stage b {
+  color: #fdfbf6;
+  display: block;
+  font-weight: 600;
+}
+
+.stage span {
+  color: #a9b4ab;
+  font-size: 0.94rem;
+}
+
+/* ---------- pricing ---------- */
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--serif);
+}
+
+.price b {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.price span {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--ink-mute);
+}
+
+.price--word b {
+  font-size: 1.9rem;
+}
+
+.card--feature {
+  border-color: var(--green);
+  box-shadow: 0 12px 34px rgba(74, 124, 89, 0.1);
+}
+
+.tag {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold-ink);
+  background: var(--gold-wash);
+  padding: 5px 11px;
+  border-radius: 3px;
+}
+
+/* ---------- faq ---------- */
+
+.faq {
+  border-top: 1px solid var(--rule);
+  max-width: 820px;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq summary {
+  cursor: pointer;
+  padding: 22px 40px 22px 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  list-style: none;
+  position: relative;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gold-ink);
+  line-height: 1;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq p {
+  padding: 0 40px 24px 0;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  background: var(--forest-deep);
+  color: #9aa79e;
+  padding-block: 56px 34px;
+  font-size: 0.92rem;
+}
+
+.footer a {
+  color: #cdd6cd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 36px;
+}
+
+@media (max-width: 780px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer h4 {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer__base {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid var(--forest-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  justify-content: space-between;
+  color: #6f7c73;
+  font-size: 0.86rem;
+}
+
+/* ---------- document pages (privacy / support) ---------- */
+
+.doc {
+  max-width: 760px;
+  padding-block: clamp(48px, 6vw, 84px);
+}
+
+.doc h2 {
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  margin-top: 44px;
+}
+
+.doc h3 {
+  font-size: 1.15rem;
+  margin-top: 30px;
+}
+
+.doc p,
+.doc li {
+  color: var(--ink-soft);
+}
+
+.doc p {
+  margin-top: 14px;
+}
+
+.doc ul {
+  margin-top: 14px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.94rem;
+}
+
+.doc th,
+.doc td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.doc th {
+  font-size: 0.74rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+
+.doc td {
+  color: var(--ink-soft);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.callout {
+  margin-top: 24px;
+  padding: 22px 26px;
+  background: var(--gold-wash);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+}
+
+.callout p {
+  margin-top: 0;
+  color: #5c4d2c;
+}
+
+/* ---------- scientific citations ---------- */
+
+/* Real quotations from the literature, presented as evidence rather than
+   decoration. The rule and the source line are what separate a cited finding
+   from a marketing claim, so both are load-bearing. */
+.finding {
+  display: grid;
+  gap: 14px;
+  padding: 26px 28px;
+  border-left: 3px solid var(--gold);
+  background: var(--forest-deep);
+  border-radius: 0 8px 8px 0;
+}
+
+.band--stone .finding {
+  background: var(--ground);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold-ink);
+}
+
+.finding blockquote {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.45;
+  color: #f2ede2;
+  font-style: italic;
+}
+
+.band--stone .finding blockquote {
+  color: var(--ink);
+}
+
+.finding cite {
+  font-style: normal;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: #9faea3;
+}
+
+.band--stone .finding cite {
+  color: var(--ink-mute);
+}
+
+.finding cite a {
+  color: inherit;
+}
+
+.finding .takeaway {
+  font-size: 0.97rem;
+  color: #bcc5bd;
+  padding-top: 12px;
+  border-top: 1px solid var(--forest-line);
+}
+
+.band--stone .finding .takeaway {
+  color: var(--ink-soft);
+  border-top-color: var(--rule);
+}
+
+.finding .takeaway b {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.band--stone .finding .takeaway b {
+  color: var(--gold-ink);
+}
+
+.findings {
+  display: grid;
+  gap: 18px;
+}
+
+/* ---------- figures, for the funding page ---------- */
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 26px;
+  border-radius: 8px;
+  background: var(--ground);
+  border: 1px solid var(--rule);
+}
+
+.band--forest .figure {
+  background: var(--forest-deep);
+  border-color: var(--forest-line);
+}
+
+.figure b {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--gold-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.band--forest .figure b {
+  color: var(--gold);
+}
+
+.figure span {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.band--forest .figure span {
+  color: #bcc5bd;
+}
+
+.doc table.budget td:last-child,
+.doc table.budget th:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.doc table.budget tr.total td {
+  font-weight: 700;
+  color: var(--ink);
+  border-top: 2px solid var(--gold-ink);
+  border-bottom: none;
+}
+
+.doc table.budget tr.sub td {
+  color: var(--ink-mute);
+  font-size: 0.9rem;
+}

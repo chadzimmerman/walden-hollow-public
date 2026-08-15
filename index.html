@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Walden Hollow | The private club's fishery record</title>
+    <meta
+      name="description"
+      content="A private logbook, map, and fish record for your club's water. Every catch, every hole, every fish, kept by the club, for the club."
+    />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="shell nav__inner">
+        <a class="brand" href="/">
+          <img src="assets/fly-small.png" alt="" />
+          <b>Walden Hollow</b>
+        </a>
+        <nav class="nav__links">
+          <a href="#app">The app</a>
+          <a href="#record">The fish record</a>
+          <a href="#science">The science</a>
+          <a href="#clubs">For clubs</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <a class="btn btn--primary" href="#contact">Talk to us</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ---------------------------------------------------- hero -->
+      <section class="hero">
+        <div class="shell hero__grid">
+          <div class="stack">
+            <p class="eyebrow">For private fishing clubs</p>
+            <h1>Know your water.</h1>
+            <div class="hero__rule"></div>
+            <p class="lede">
+              Your club's knowledge lives in the lodge: in stories, in one
+              member's notebook, in what somebody thinks they remember about the
+              run below the bridge. Walden Hollow puts it on the record: every
+              catch, every hole, and eventually every fish, kept privately by the
+              club, for the club.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="#contact">Talk to us about your club</a>
+              <a class="btn btn--ghost" href="#record">See the fish record</a>
+            </div>
+            <p class="small">
+              On iPhone now, in testing with a club on the Colorado River.
+              Android next.
+            </p>
+          </div>
+
+          <div class="showcase">
+            <!-- Drop the output of `npm run screenshots` into assets/screens/. -->
+            <div class="phone phone--back" data-slot="Map">
+              <img src="assets/screens/02-map.jpg" alt="The club's holes on the map" onerror="this.remove()" />
+            </div>
+            <div class="phone" data-slot="Home">
+              <img src="assets/screens/01-home.jpg" alt="Home screen showing live water conditions" onerror="this.remove()" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip">
+        <div class="shell strip__inner">
+          <span><b>Private</b> by design</span>
+          <span><b>Built with</b> a real club, not a focus group</span>
+          <span><b>No ads.</b> No data resale. Ever.</span>
+        </div>
+      </div>
+
+      <!-- ---------------------------------------------------- problem -->
+      <section class="band" id="app">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">The problem</p>
+            <h2>A club knows less about its own water than you would think.</h2>
+            <p class="lede">
+              Members catch fish, tell each other in the lodge, and the knowledge
+              dies there. Which leaves the questions that actually decide how a
+              club spends money unanswered.
+            </p>
+          </div>
+
+          <div class="cards cards--four">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Is the fishery improving?</h3>
+              <p class="small">
+                Or does it just feel that way this year? Without a record, a good
+                season and a good memory are indistinguishable.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Did the stocking work?</h3>
+              <p class="small">
+                You paid for those fish. Did they survive, move, grow, or go straight downstream past the property line?
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Which holes carry the water?</h3>
+              <p class="small">
+                Which are producing, which are being over-fished, and which have
+                quietly stopped fishing at all.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Is this the same brown?</h3>
+              <p class="small">
+                The one that broke off at the chute last September. No logbook
+                has ever been able to answer this.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- features -->
+      <section class="band band--stone">
+        <div class="shell">
+          <div class="row">
+            <div class="stack">
+              <p class="eyebrow">In the water</p>
+              <h2>Thirty seconds, one hand, wet.</h2>
+              <p>
+                A catch gets logged while the fish is still in the net: species,
+                length, hole, fly. Not typed up later from memory, when the
+                details have already gone.
+              </p>
+              <ul class="ticks">
+                <li>Large type and large targets, for cold hands and bright sun</li>
+                <li>Confirmations sit where your thumb already is, so nothing needs scrolling</li>
+                <li>Built and tested with members in their seventies, in waders</li>
+              </ul>
+            </div>
+            <div class="row__media">
+              <div class="panel">
+                <div class="phone" data-slot="Log a catch">
+                  <img src="assets/screens/03-log.jpg" alt="Logging a catch" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row--flip">
+            <div class="stack">
+              <p class="eyebrow">Your water</p>
+              <h2>Every hole. Your names, your numbering.</h2>
+              <p>
+                The club's own map, with the names off the board in the lodge, not a public app's idea of where your river is, and not visible
+                to anybody outside the club.
+              </p>
+              <ul class="ticks">
+                <li>Satellite imagery, with each hole where the club says it is</li>
+                <li>"Nearest to me" for members who are new, or new to that stretch</li>
+                <li>A hole's whole history: what has come out of it, and when</li>
+              </ul>
+            </div>
+            <div class="row__media">
+              <div class="panel">
+                <div class="phone" data-slot="The map">
+                  <img src="assets/screens/02-map.jpg" alt="The map of club holes" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="stack">
+              <p class="eyebrow">Conditions</p>
+              <h2>The river attaches itself.</h2>
+              <p>
+                Flow, water temperature and weather come from public USGS and
+                National Weather Service gauges and are stamped onto the catch automatically, so the record carries the conditions that
+                <em>produced</em> the fish, not the conditions when somebody
+                remembered to write it down.
+              </p>
+              <ul class="ticks">
+                <li>Live flow and water temperature on the home screen</li>
+                <li>Logging a catch from last week pulls that day's readings, not today's</li>
+                <li>Over seasons, this is what makes "the river fishes better at 120 cfs" a fact instead of a hunch</li>
+              </ul>
+            </div>
+            <div class="row__media">
+              <div class="panel">
+                <div class="phone" data-slot="History">
+                  <img src="assets/screens/04-history.jpg" alt="The club's catch history" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- fish record -->
+      <section class="band" id="record">
+        <div class="shell">
+          <div class="row row--flip">
+            <div class="stack">
+              <p class="eyebrow">The difference</p>
+              <h2>A record of fish, not just of catches.</h2>
+              <p class="lede">
+                Any app can store a list of catches. The reason to run this one is
+                that a fish becomes an individual with a history.
+              </p>
+              <p>
+                When a fish can be identified, the club sees everywhere it has
+                been caught, by whom, and how much it has grown between times.
+                Twenty of those and you no longer have anecdotes. You have a
+                growth curve, a movement pattern, and evidence about whether what
+                the club is doing to the river is working.
+              </p>
+              <ul class="ticks">
+                <li>Every recapture, with who caught it and where</li>
+                <li>Growth between captures, measured against a consistent reference</li>
+                <li>Movement between holes, across seasons</li>
+              </ul>
+            </div>
+            <div class="row__media">
+              <div class="panel">
+                <div class="phone" data-slot="A fish's journey">
+                  <img src="assets/screens/06-fish.jpg" alt="A named fish and its recapture history" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- science -->
+      <section class="band band--forest" id="science">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Where this is going</p>
+            <h2>Making the tag obsolete.</h2>
+            <p class="lede" style="font-family: var(--serif); font-style: italic; color: #f2ede2">
+              "Individual fish identification and recognition is an important
+              step in the conservation and management of fisheries."
+            </p>
+            <p class="small" style="color: #9faea3">
+              <i>Applied Sciences</i> 11(19):9039, 2021
+            </p>
+            <p class="lede">
+              Knowing which fish, not just how many, is what turns angling
+              records into fisheries science. Growth, movement and survival after
+              stocking are all questions about individuals. Today, identifying an
+              individual fish means implanting a PIT chip.
+              That is invasive, it only covers fish the club has physically
+              handled, and it caps the study at whatever the club has time to tag.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="stack">
+              <h3>Trout already carry a fingerprint.</h3>
+              <p>
+                The spot pattern on a brown or rainbow trout's flank is unique to
+                that individual and stable over years. If it can be matched from a
+                photograph, the fish is already wearing its own tag. No handling,
+                and <em>every fish caught</em> becomes a tracked individual rather
+                than only the dozen that were chipped.
+              </p>
+              <p>
+                That is why the chips exist in version one: a chipped fish
+                photographed twice is a labelled pair, and labelled pairs are the
+                only way to prove a photo matcher actually works.
+                <strong>The hardware is scaffolding. It is there to make itself
+                unnecessary.</strong>
+              </p>
+            </div>
+            <div class="stack">
+              <div class="stages">
+                <div class="stage">
+                  <span class="stage__n">1</span>
+                  <div><b>Capture</b><span>A guided overlay in the camera. The angler fills the outline; the app rejects a photo too small, too angled, or out of focus while the fish is still in hand.</span></div>
+                </div>
+                <div class="stage">
+                  <span class="stage__n">2</span>
+                  <div><b>Isolate</b><span>Separate the flank from net, hands, water and gravel.</span></div>
+                </div>
+                <div class="stage">
+                  <span class="stage__n">3</span>
+                  <div><b>Rectify</b><span>Warp to a standard frame using snout, eye, adipose fin and tail. This is the step that decides whether any of it works.</span></div>
+                </div>
+                <div class="stage">
+                  <span class="stage__n">4</span>
+                  <div><b>Read the spots</b><span>Turn the flank into a constellation of spot positions and sizes.</span></div>
+                </div>
+                <div class="stage">
+                  <span class="stage__n">5</span>
+                  <div><b>Match</b><span>Compare that constellation against every fish the club knows, using the same technique applied to whale sharks and sea turtles for two decades.</span></div>
+                </div>
+                <div class="stage">
+                  <span class="stage__n">6</span>
+                  <div><b>A person decides</b><span>Ranked candidates, side by side. The app never assigns a match on its own.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack stack--tight">
+            <h3>The evidence this is built on</h3>
+            <p class="lede">
+              Photographic identification of individual fish is a published
+              method in fisheries science, not a claim we invented. Three
+              findings shaped what the app does.
+            </p>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <blockquote>
+                "One of most frequently used methods involves capturing and
+                tagging fish. However, these processes have been reported to
+                cause tissue damage, premature tag loss, and decreased swimming
+                capacity."
+              </blockquote>
+              <cite>
+                Photo Identification of Individual <i>Salmo trutta</i> Based on Deep
+                Learning, <i>Applied Sciences</i> 11(19):9039, 2021.
+                <a href="https://doi.org/10.3390/app11199039">doi:10.3390/app11199039</a>
+              </cite>
+              <p class="takeaway">
+                <b>So the tag is the problem, not just the cost.</b> This is why
+                the roadmap ends with photography replacing the chip rather than
+                supplementing it. The same study identified individual brown
+                trout from video at 94.6% precision and 74.3% recall, on a
+                dataset of 39 fish across 288 frames, which is also why we treat
+                a shortlist reviewed by a person as the honest output rather
+                than an automatic answer.
+              </p>
+            </div>
+
+            <div class="finding">
+              <blockquote>
+                "In both populations, all annotated images ranked the first
+                ranking score, indicating perfect recognition. The long-term
+                analysis revealed a high performance in recognition of
+                individuals because 75% of the images of fish at the age of 2
+                years were successfully matched with images of the same fish at
+                the age of 3 years."
+              </blockquote>
+              <cite>
+                Colihueque N, Estay F (2025) Photo-identification of individual
+                rainbow trout, <i>Oncorhynchus mykiss</i>, using the flank spot
+                pattern. <i>Acta Ichthyologica et Piscatoria</i> 55: 181&ndash;190.
+                <a href="https://doi.org/10.3897/aiep.55.151044">doi:10.3897/aiep.55.151044</a>
+              </cite>
+              <p class="takeaway">
+                <b>So the flank pattern persists across a year of growth, and
+                the matching needs no training data.</b> That study scored spot
+                patterns with I3S, an interactive identification system used on
+                whale sharks and sea turtles for two decades. Our matcher works
+                the same way first, because a point-pattern comparison can be
+                evaluated on the few dozen fish a single club actually has,
+                where a neural network cannot.
+              </p>
+            </div>
+
+            <div class="finding">
+              <blockquote>
+                "We proved that the methodology can be used as a non-invasive
+                substitute for invasive fish tagging. The methodology can be
+                adapted to any fish species with dot skin patterns."
+              </blockquote>
+              <cite>
+                Automatic identification of individual Atlantic salmon
+                (<i>Salmo salar</i>) by dot skin patterns, tested on 328
+                individuals at 100% accuracy. <i>Scientific Reports</i> 11, 2021.
+                <a href="https://www.nature.com/articles/s41598-021-96476-4">s41598-021-96476-4</a>
+              </cite>
+              <p class="takeaway">
+                <b>So the substitution works at population scale, under
+                controlled photography.</b> Controlled photography is the
+                condition, and it is the whole reason the app puts a trout
+                outline on the camera and refuses a frame that is too small, too
+                angled or out of focus. The guide is not decoration. It is the
+                experimental control.
+              </p>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Where the evidence stops</h3>
+              <p class="small">
+                These results come from small populations under controlled
+                photography, mostly over months rather than years. A 2025 review
+                in <i>Reviews in Aquaculture</i> still lists long-term and
+                large-population performance as open questions. Nothing in the
+                literature was tested on photographs taken one-handed by an
+                angler standing in a river, which is exactly our condition.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>So we run it as research</h3>
+              <p class="small">
+                Guided capture ships today and builds your club's photographic
+                record from the first season. The matching is validated against
+                chipped-fish ground truth with an accuracy bar it has to clear,
+                including a false-match rate near zero. A confident wrong answer
+                would corrupt the very record the fishery science depends on.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>What it means for the river</h3>
+              <p class="small">
+                State biologists survey small streams roughly once every five to
+                ten years. A club photographing every fish it catches produces
+                continuous, individually-tracked recapture data on one reach:
+                growth rates, movement, and survival after stocking. That is
+                conservation evidence, gathered by anglers, at no cost to the
+                fish.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      <!-- ---------------------------------------------------- privacy -->
+      <section class="band band--stone">
+        <div class="shell">
+          <div class="row">
+            <div class="stack">
+              <p class="eyebrow">Private club, private data</p>
+              <h2>Your water does not appear on anyone else's map.</h2>
+              <p>
+                Members joined a private club. Their catch locations becoming
+                public is a matter of trust before it is a matter of policy, so the product is built so that it cannot happen by accident.
+              </p>
+              <ul class="ticks">
+                <li>The club's holes and coordinates are visible only to its own members</li>
+                <li>Every club's data is walled off from every other club's</li>
+                <li>Nothing is sold, shared, or used to train anything</li>
+                <li>Even our own screenshots and demos run on an invented river, so the real water is never published</li>
+              </ul>
+            </div>
+            <div class="stack">
+              <div class="card">
+                <div class="card__mark"></div>
+                <h3>Any data leaving the club is the club's decision.</h3>
+                <p class="small">
+                  There is real scientific value in what a club records. State
+                  fisheries biologists survey small streams roughly once every
+                  five to ten years. A club running this produces continuous,
+                  individually-tracked recapture data on its own reach.
+                </p>
+                <p class="small">
+                  If a club wants to contribute that to a research partnership,
+                  we will help. <strong>It is opt-in, it is anonymised as to
+                  location, and it never happens by default.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- what you get -->
+      <section class="band" id="clubs">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">For clubs</p>
+            <h2>We set it up. Your members just fish.</h2>
+            <p class="lede">
+              Nobody on your board should have to administer software. Onboarding
+              is done with you, on your water.
+            </p>
+          </div>
+          <div class="cards cards--four">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Your river, mapped</h3>
+              <p class="small">
+                We put every hole on the map with your names and your numbering,
+                from your own records, and set the app to your gauge station.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>The starter kit</h3>
+              <p class="small">
+                Measuring mats so length is comparable between members, and PIT
+                chips and a reader for the first tagged fish, the ground truth
+                the fish record is built on.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Members added for you</h3>
+              <p class="small">
+                We create the accounts and walk the first few through it. The app
+                has a guided tour over the real screens and a help section
+                written in plain English.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>A season report</h3>
+              <p class="small">
+                At the end of the season, what the record actually says about your water. The report a board can put in front of its members.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- pricing -->
+      <section class="band band--stone" id="pricing">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Pricing</p>
+            <h2>The club pays. Not the member.</h2>
+            <p class="lede">
+              A fishery record that only half the members contribute to is not a fishery record, so it is never a per-member subscription that
+              somebody can decline.
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card card--feature">
+              <span class="tag">Annual, per club</span>
+              <h3>The club record</h3>
+              <div class="price"><b>$5</b><span>per member, per month</span></div>
+              <p class="small">
+                Billed to the club. Everything in the app for every member: logbook, map, conditions, the fish record, and both platforms.
+              </p>
+              <ul class="ticks">
+                <li>Unlimited catches and holes</li>
+                <li>Guided identification photography</li>
+                <li>End-of-season report</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">One time</span>
+              <h3>Setup &amp; starter kit</h3>
+              <div class="price price--word"><b>Quoted</b><span>per club</span></div>
+              <p class="small">
+                Mapping your holes, configuring your gauge, creating member
+                accounts, and the measuring and tagging equipment.
+              </p>
+              <ul class="ticks">
+                <li>Tapers with club size</li>
+                <li>Hardware included</li>
+                <li>On-water onboarding</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">Always</span>
+              <h3>What you never pay for</h3>
+              <div class="price"><b>$0</b><span>forever</span></div>
+              <ul class="ticks">
+                <li>No advertising, ever</li>
+                <li>No selling or sharing your club's data</li>
+                <li>No per-member upsells inside the app</li>
+              </ul>
+            </div>
+          </div>
+          <p class="small">
+            A club's record belongs to the club. If you ever leave, we export it
+            and hand it over.
+          </p>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- faq -->
+      <section class="band">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Questions</p>
+            <h2>What boards ask us.</h2>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Our members are not technical. Is this going to be a problem?</summary>
+              <p>
+                It is the constraint the whole app was designed around. The first
+                club's primary tester is a retired man in his seventies, in
+                waders, in bright sun, with cold wet hands. If he cannot do it,
+                it gets changed. That is not a slogan, it is how the release
+                notes read.
+              </p>
+            </details>
+            <details>
+              <summary>Does the fish identification actually work yet?</summary>
+              <p>
+                Not yet, and we would rather say so. The guided photography ships
+                today and starts building your club's record from the first
+                season, which is what the matching needs to exist at all. The
+                matching itself is being validated against chipped fish with a
+                defined accuracy bar it has to clear before it goes near a
+                member's screen. Until then, identification is done by hand
+                against the chip.
+              </p>
+            </details>
+            <details>
+              <summary>Do we have to chip fish?</summary>
+              <p>
+                For now, to identify individuals, yes. That is the honest answer
+                and it is also temporary. The tagged fish are what prove the
+                photographic matching works, and as the photographic record of
+                your river fills in, the tagging tapers off. The equipment is
+                included in setup.
+              </p>
+            </details>
+            <details>
+              <summary>Could our water end up on a public map?</summary>
+              <p>
+                No. Hole locations are visible only to members of your club, each
+                club's data is walled off from every other club's, and nothing is
+                shared or sold. Our own marketing screenshots and demos run on an
+                invented river specifically so that no real club's water is ever published, including our first club's.
+              </p>
+            </details>
+            <details>
+              <summary>What happens to our record if we stop paying?</summary>
+              <p>
+                We export it and give it to you. The club's record belongs to the
+                club, and it should not be a hostage.
+              </p>
+            </details>
+            <details>
+              <summary>Is there an Android version?</summary>
+              <p>
+                It is built and not yet released. iPhone is in testing with our
+                first club now; Android follows. It is one app on both, not a cut-down second version.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------- cta -->
+      <section class="band band--forest" id="contact">
+        <div class="shell stack">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Tell us about your water.</h2>
+          <p class="lede">
+            We are onboarding a small number of clubs so that each one gets set up
+            properly. If your club keeps a river and wants to know what is
+            actually happening in it, write to us.
+          </p>
+          <div class="btn-row">
+            <!-- TODO: replace with the real support address before publishing. -->
+            <a class="btn btn--gold" href="mailto:hello@waldenhollow.app">hello@waldenhollow.app</a>
+            <a class="btn btn--ghost" href="support.html" style="border-color: #2a3f32; color: #ece7dc">Support</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer__grid">
+          <div>
+            <a class="brand" href="/" style="color: #ece7dc">
+              <img src="assets/fly-small.png" alt="" />
+              <b>Walden Hollow</b>
+            </a>
+            <p class="small" style="color: #7f8c83; margin-top: 12px; max-width: 34ch">
+              A private fishery record for clubs that keep a river.
+            </p>
+          </div>
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#app">The app</a></li>
+              <li><a href="#record">The fish record</a></li>
+              <li><a href="#science">The science</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support.html">Help &amp; contact</a></li>
+              <li><a href="mailto:hello@waldenhollow.app">Email us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="privacy.html#deletion">Delete your account</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__base">
+          <span>© 2026 Walden Hollow. All rights reserved.</span>
+          <span>Made on the Colorado River.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

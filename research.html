@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Continuous Record of Colorado's Trout</title>
+    <meta
+      name="description"
+      content="A proposal to fund open, angler-gathered, individually identified fish records for Colorado waters, for use by fisheries managers and the public."
+    />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="shell nav__inner">
+        <a class="brand" href="index.html">
+          <img src="assets/fly-small.png" alt="" />
+          <b>Walden Hollow</b>
+        </a>
+        <nav class="nav__links">
+          <a href="#gap">The gap</a>
+          <a href="#method">Method</a>
+          <a href="#limits">Limitations</a>
+          <a href="#budget">Budget</a>
+          <a href="#funding">Funding</a>
+          <a href="#references">References</a>
+        </nav>
+        <a class="btn btn--primary" href="#ask">The ask</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell stack">
+          <p class="eyebrow">Proposal for agency and research partners</p>
+          <h1>Every trout, every catch, on the record.</h1>
+          <div class="hero__rule"></div>
+          <p class="lede">
+            Colorado has roughly a million fishing licences in circulation and
+            surveys most of its small streams about once a decade. This is a
+            proposal to close that gap by turning routine angling into a
+            continuous, individually identified fish record, gathered at no cost
+            to the fish and at a fraction of the cost of a survey crew.
+          </p>
+          <div class="figures" style="margin-top: 12px">
+            <div class="figure">
+              <b>$167,000</b>
+              <span>Year one. One engineer, three study reaches, ground-truth hardware.</span>
+            </div>
+            <div class="figure">
+              <b>$658,000</b>
+              <span>Three years, pilot through statewide public release.</span>
+            </div>
+            <div class="figure">
+              <b>$0.21</b>
+              <span>Cost per identified fish record at one in four Colorado anglers taking part. The same record costs the state somewhere between $4 and $25 in staff time alone, depending on crew throughput.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip">
+        <div class="shell strip__inner">
+          <span><b>Non-invasive.</b> No tag, no handling</span>
+          <span><b>Open data</b> by default</span>
+          <span><b>Built and running</b> on a Colorado River reach today</span>
+        </div>
+      </div>
+
+      <section class="band" id="gap">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">The monitoring gap</p>
+            <h2>A decade between snapshots.</h2>
+            <p class="lede">
+              Standardised electrofishing surveys are the backbone of fisheries
+              management and they are expensive, so smaller streams are sampled
+              on a cycle measured in years. Between those visits, the record of
+              what is happening in a reach is close to empty, while thousands of
+              anglers stand in it every season holding the exact information a
+              biologist would want.
+            </p>
+          </div>
+          <div class="cards cards--four">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Did the stocking take?</h3>
+              <p class="small">
+                Survival, dispersal and growth of stocked fish are direct
+                management questions, and today they are answered by inference
+                rather than by following the individuals.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Where do fish move?</h3>
+              <p class="small">
+                Movement between reaches, into and out of tributaries, and in
+                response to flow or temperature, at an individual level.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>How fast do they grow?</h3>
+              <p class="small">
+                Growth measured on the same fish across seasons rather than
+                inferred from a length-frequency distribution.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Is the trend real?</h3>
+              <p class="small">
+                Continuous recapture data across many reaches is what separates
+                a bad year from a decline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--forest" id="method">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Method</p>
+            <h2>The fish is already carrying its tag.</h2>
+            <p class="lede">
+              Natural body patterns are individually unique and stable over
+              years. Identification from a photograph is an established method in
+              the literature, not a claim we are making for the first time, and
+              it is not confined to spotted fish: published work identifies
+              individual common carp from scale pattern and Eurasian perch from
+              stripes, alongside the salmonid work below.
+            </p>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <blockquote>
+                "One of most frequently used methods involves capturing and
+                tagging fish. However, these processes have been reported to
+                cause tissue damage, premature tag loss, and decreased swimming
+                capacity."
+              </blockquote>
+              <cite>
+                Photo Identification of Individual <i>Salmo trutta</i> Based on
+                Deep Learning, <i>Applied Sciences</i> 11(19):9039, 2021.
+                <a href="https://doi.org/10.3390/app11199039">doi:10.3390/app11199039</a>
+              </cite>
+              <p class="takeaway">
+                <b>The welfare case and the sample-size case point the same
+                way.</b> A method that requires no capture beyond the angling
+                already happening, and no implant, can be applied to every fish
+                landed rather than to the handful a crew can process.
+              </p>
+            </div>
+
+            <div class="finding">
+              <blockquote>
+                "In both populations, all annotated images ranked the first
+                ranking score, indicating perfect recognition. The long-term
+                analysis revealed a high performance in recognition of
+                individuals because 75% of the images of fish at the age of 2
+                years were successfully matched with images of the same fish at
+                the age of 3 years."
+              </blockquote>
+              <cite>
+                Colihueque N, Estay F (2025), rainbow trout
+                <i>Oncorhynchus mykiss</i>, wild (n=56) and farmed (n=45)
+                populations. <i>Acta Ichthyologica et Piscatoria</i> 55: 181&ndash;190.
+                <a href="https://doi.org/10.3897/aiep.55.151044">doi:10.3897/aiep.55.151044</a>
+              </cite>
+              <p class="takeaway">
+                <b>The pattern persists across a year of growth.</b> That study
+                used I3S, an interactive identification system applied to whale
+                sharks and sea turtles for two decades, which requires no
+                training data. Our matcher uses the same class of method first,
+                because it can be validated against the tens of fish a pilot
+                actually produces.
+              </p>
+            </div>
+
+            <div class="finding">
+              <blockquote>
+                "We proved that the methodology can be used as a non-invasive
+                substitute for invasive fish tagging. The methodology can be
+                adapted to any fish species with dot skin patterns."
+              </blockquote>
+              <cite>
+                Atlantic salmon (<i>Salmo salar</i>) identified by dot skin
+                pattern, 328 individuals at 100% accuracy, with pattern stability
+                confirmed over six months. <i>Scientific Reports</i> 11, 2021.
+                <a href="https://www.nature.com/articles/s41598-021-96476-4">s41598-021-96476-4</a>
+              </cite>
+              <p class="takeaway">
+                <b>Substitution holds at population scale under controlled
+                photography.</b> Controlled photography is the binding condition,
+                and it is the part this project actually contributes: moving the
+                experimental control onto a phone held by an angler.
+              </p>
+            </div>
+          </div>
+
+          <div class="stack stack--tight">
+            <h3>What the app contributes</h3>
+            <ul class="ticks">
+              <li>A guided capture overlay that fixes pose, orientation and framing, and refuses a photograph that is too small in frame, too angled, or out of focus, while the fish is still in the net</li>
+              <li>A burst of frames per encounter, so within-individual variation in wetness, light and pose is captured in a single handling of about thirty seconds</li>
+              <li>Length against a consistent in-frame reference, so growth is comparable between observers</li>
+              <li>Automatic attachment of USGS discharge and water temperature and National Weather Service conditions to every record</li>
+              <li>Ranked candidate matches confirmed by a person, never assigned automatically</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--stone">
+        <div class="shell">
+          <div class="row">
+            <div class="stack">
+              <p class="eyebrow">A Colorado case</p>
+              <h2>Greenback cutthroat recovery is the hardest thing to monitor and the easiest thing to photograph.</h2>
+              <p>
+                Colorado's state fish is federally threatened, and recovery
+                depends on tracking small reintroduced populations in headwater
+                streams that are expensive to reach and costly to survey.
+                Cutthroat are also among the most heavily and distinctively
+                spotted salmonids, which is precisely the condition under which
+                photographic identification performs best.
+              </p>
+              <p>
+                A reintroduced population monitored by the anglers and volunteers
+                who already walk those drainages would produce individual
+                survival and growth data between formal surveys, without a single
+                fish being handled for a tag.
+              </p>
+              <p class="small">
+                There is precedent for exactly this species group. Gifford and
+                Mayhood catalogued natural marks for identifying individual fish
+                in small at-risk populations of westslope cutthroat, and a
+                long-term study comparing datasets from 1997 and 1999 identified
+                adult cutthroat from skin spots after two years.
+              </p>
+              <p class="small">
+                We are not proposing to replace recovery monitoring. We are
+                proposing to fill the years between visits with individually
+                identified observations that currently do not exist.
+              </p>
+            </div>
+            <div class="row__media">
+              <div class="panel">
+                <div class="phone">
+                  <img src="assets/screens/06-fish.jpg" alt="An individual fish record showing three captures, three holes, and the movement between them" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="limits">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Limitations, stated plainly</p>
+            <h2>What this data is not.</h2>
+            <p class="lede">
+              A proposal that only lists strengths is not a proposal a reviewer
+              should trust. These are the constraints we would want a
+              statistician to know before the first record is collected.
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Angler catch is biased</h3>
+              <p class="small">
+                Catch is skewed toward catchable size classes, toward the
+                species anglers pursue, and toward water people can reach. Any
+                legal method counts, so this is not a fly-fishing dataset, but it
+                still cannot produce an unbiased population estimate and is not a
+                substitute for standardised electrofishing.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Effort is uneven</h3>
+              <p class="small">
+                More data arrives on weekends, in good weather, and near access
+                points. Effort has to be modelled explicitly rather than assumed
+                uniform, which is why every record carries time, location and
+                conditions.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Field accuracy is still being measured</h3>
+              <p class="small">
+                Published accuracy comes from controlled photography. Nothing in
+                the literature was validated on photographs taken one-handed in a
+                river, so we are measuring it: a field trial has been running on
+                a Colorado River tailwater reach since mid-2026 and is ongoing.
+                That number is a deliverable of this work, not an assumption
+                behind it.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Performance varies by species</h3>
+              <p class="small">
+                The method is not limited to spotted fish: individual
+                identification is published for common carp from scale pattern
+                and for Eurasian perch from stripes. But every species needs its
+                own validation. Rainbow spot patterns are finer and denser than
+                brown, so accuracy should be expected to differ, and each new
+                species starts at zero until it is measured.
+              </p>
+            </div>
+          </div>
+          <div class="callout" style="background: var(--stone); border-left-color: var(--gold-ink)">
+            <p style="color: var(--ink-soft)">
+              <b>How accuracy gets established.</b> PIT-tagged fish provide hard
+              ground truth: a tagged fish photographed twice is one labelled
+              pair. Performance is reported as rank-1 accuracy, top-5, and false
+              acceptance rate, each against the chance baseline for the gallery
+              size, with the gallery padded to simulate larger populations. The
+              programme proceeds to public release only if false acceptance can
+              be driven near zero without collapsing recall. A conservative
+              "no match" is scientifically usable. A confident wrong match
+              silently corrupts a growth series, which is the outcome worth
+              spending money to avoid.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--forest">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Two deployment models</p>
+            <h2>Agency instrument first, public platform second.</h2>
+          </div>
+          <div class="row">
+            <div class="stack">
+              <h3>Model A. Agency and research use</h3>
+              <p>
+                Accounts issued to biologists, technicians and permitted
+                volunteers on defined study reaches. Precise coordinates
+                retained. Emphasis on ground truth, matcher validation and
+                controlled comparison against electrofishing on the same water.
+              </p>
+              <ul class="ticks">
+                <li>A field trial has been running on a Colorado River tailwater reach since mid-2026 and is ongoing</li>
+                <li>Three study reaches in year one</li>
+                <li>PIT ground truth on every study reach</li>
+                <li>Validation report published regardless of outcome</li>
+              </ul>
+            </div>
+            <div class="stack">
+              <h3>Model B. Open public release</h3>
+              <p>
+                Free to any Colorado angler. Every catch photographed through the
+                guide becomes a candidate record. Location published at reach
+                resolution rather than as a pin, so the dataset does not become a
+                map of where the fish are holding.
+              </p>
+              <ul class="ticks">
+                <li>Statewide, no licence beyond a fishing licence</li>
+                <li>Volunteer coordinators with reference equipment</li>
+                <li>Open data release on a fixed schedule</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--stone" id="budget">
+        <div class="shell doc" style="max-width: 900px; padding-block: 0">
+          <p class="eyebrow">Budget</p>
+          <h2 style="margin-top: 10px">What it costs to build and run.</h2>
+          <p>
+            Costed as a single full-time engineer building and maintaining the
+            platform, plus the infrastructure and field equipment the science
+            requires. No indirect or overhead rate is charged.
+          </p>
+
+          <h3>Year one: pilot and validation</h3>
+          <div class="table-wrap">
+            <table class="budget">
+              <thead>
+                <tr><th>Line</th><th>Annual</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Software engineer, 1.0 FTE (platform, data pipeline, matcher validation)</td><td>$105,000</td></tr>
+                <tr><td>Fringe benefits at 25%</td><td>$26,250</td></tr>
+                <tr class="sub"><td>Cloud database, authentication, image storage and archive</td><td>$4,800</td></tr>
+                <tr class="sub"><td>Map and geospatial services</td><td>$600</td></tr>
+                <tr class="sub"><td>Matcher training and validation compute</td><td>$2,400</td></tr>
+                <tr class="sub"><td>Monitoring, backups, offsite archive</td><td>$1,200</td></tr>
+                <tr class="sub"><td>Developer accounts, domain, email</td><td>$400</td></tr>
+                <tr class="sub"><td>PIT readers (2 handheld) and 500 tags</td><td>$6,150</td></tr>
+                <tr class="sub"><td>Measuring mats, reference boards, field cases</td><td>$2,700</td></tr>
+                <tr class="sub"><td>Travel to study reaches and partner meetings</td><td>$3,200</td></tr>
+                <tr class="sub"><td>Volunteer training and workshops</td><td>$1,800</td></tr>
+                <tr><td>Contingency at 8%</td><td>$12,360</td></tr>
+                <tr class="total"><td>Year one total</td><td>$166,860</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>At statewide public scale</h3>
+          <p class="small">
+            Assumes 25,000 active anglers producing roughly 375,000 identified
+            records per year. Adds the two roles that a public platform requires
+            and a research pilot does not.
+          </p>
+          <div class="table-wrap">
+            <table class="budget">
+              <thead>
+                <tr><th>Line</th><th>Annual</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Software engineer, 1.0 FTE</td><td>$105,000</td></tr>
+                <tr><td>Community and support coordinator, 0.5 FTE</td><td>$30,000</td></tr>
+                <tr><td>Fisheries data technician, 0.5 FTE (verification and QA)</td><td>$27,500</td></tr>
+                <tr><td>Fringe benefits at 25%</td><td>$40,625</td></tr>
+                <tr class="sub"><td>Cloud database, authentication, growing image archive</td><td>$14,400</td></tr>
+                <tr class="sub"><td>Data delivery and egress</td><td>$4,800</td></tr>
+                <tr class="sub"><td>Batch matching and retraining compute</td><td>$6,000</td></tr>
+                <tr class="sub"><td>Monitoring, backups, redundancy</td><td>$2,400</td></tr>
+                <tr class="sub"><td>Developer accounts, domain, email</td><td>$400</td></tr>
+                <tr class="sub"><td>Reference equipment for 20 volunteer coordinator sites</td><td>$16,000</td></tr>
+                <tr class="sub"><td>Travel, workshops, public outreach</td><td>$9,000</td></tr>
+                <tr><td>Contingency at 8%</td><td>$20,490</td></tr>
+                <tr class="total"><td>Statewide annual total</td><td>$276,615</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Three-year programme</h3>
+          <div class="table-wrap">
+            <table class="budget">
+              <tbody>
+                <tr><td>Year 1. Pilot on three reaches, matcher validated against PIT ground truth</td><td>$166,860</td></tr>
+                <tr><td>Year 2. Regional expansion, roughly 5,000 anglers, open data pipeline built</td><td>$215,000</td></tr>
+                <tr><td>Year 3. Statewide public release and sustained operation</td><td>$276,615</td></tr>
+                <tr class="total"><td>Three-year total</td><td>$658,475</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Economics at scale</p>
+            <h2>The anglers have already paid for the fieldwork.</h2>
+            <p class="lede">
+              This is the part that makes the case. Almost all the cost is fixed
+              staff and infrastructure, while the data collection is done by
+              people who bought a licence for the privilege of doing it. Every
+              additional participant lowers the cost per record, and the state
+              pays nothing for the labour.
+            </p>
+          </div>
+
+          <div class="table-wrap">
+            <table class="budget doc">
+              <thead>
+                <tr>
+                  <th>Participation</th>
+                  <th>Anglers</th>
+                  <th>Records / year</th>
+                  <th>Programme cost</th>
+                  <th>Per record</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2.5% of licence holders</td><td>25,000</td><td>375,000</td><td>$276,615</td><td>$0.74</td></tr>
+                <tr><td>10% of licence holders</td><td>100,000</td><td>1,500,000</td><td>$511,515</td><td>$0.34</td></tr>
+                <tr class="total"><td>25% of licence holders</td><td>250,000</td><td>3,750,000</td><td>$797,175</td><td>$0.21</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">
+            Assumes fifteen logged catches per participating angler per year, and
+            staffing that steps up at each tier: a second engineer, and additional
+            support and verification roles. Colorado sells on the order of a
+            million fishing licences, so the top row is one angler in four.
+          </p>
+
+          <div class="stack stack--tight" style="margin-top: 20px">
+            <h3>What the same record would cost the state to collect</h3>
+            <p>
+              A fisheries technician at $55,000 plus 25% fringe costs about
+              $68,750 a year fully loaded, before a vehicle, a boat, an
+              electrofisher or a permit. How many fish one technician can capture,
+              measure, photograph and tag in a field day varies enormously with
+              stream size, density and crew configuration, so rather than assert
+              a single rate we have shown the whole plausible range. The
+              conclusion does not depend on where in that range the truth sits.
+            </p>
+          </div>
+
+          <div class="table-wrap">
+            <table class="budget doc">
+              <thead>
+                <tr>
+                  <th>Fish handled per technician-day</th>
+                  <th>Fish per year (110 field days)</th>
+                  <th>Cost per fish, labour only</th>
+                  <th>Versus $0.21 per record</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>25</td><td>2,750</td><td>$25.00</td><td>119x</td></tr>
+                <tr><td>50</td><td>5,500</td><td>$12.50</td><td>60x</td></tr>
+                <tr><td>100</td><td>11,000</td><td>$6.25</td><td>30x</td></tr>
+                <tr class="total"><td>150 (optimistic)</td><td>16,500</td><td>$4.17</td><td>20x</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small" style="max-width: 74ch">
+            Even at the most generous assumption, agency staff time alone costs
+            twenty times more per fish than this programme, and that excludes
+            equipment, vehicles, permitting and overtime. For scale, a published
+            winter survival study PIT-tagged 393 fish in a single autumn
+            electrofishing campaign on one 550 m reach with a two-person team
+            (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4797160/">Watz et
+            al., <i>Ecology and Evolution</i></a>).
+          </p>
+
+          <div class="callout" style="background: var(--gold-wash); border-left-color: var(--gold-ink); margin-top: 22px">
+            <p style="color: #5c4d2c">
+              <b>The deeper asymmetry is recapture, not tagging.</b> A PIT tag
+              produces no data at all until that particular fish is caught again
+              by someone carrying a reader, and first-pass electrofishing capture
+              efficiency has been measured at around 46% for salmonids
+              (<a href="https://research.fs.usda.gov/treesearch/41321">USFS,
+              Montana streams</a>), with catchability of 0.23 for backpack units
+              against 0.64 for towed barges. Recapture is the expensive half of
+              mark-recapture. Anglers recapture fish continuously, all season,
+              across every accessible reach, at no marginal cost to the agency.
+            </p>
+          </div>
+
+          <div class="figures" style="margin-top: 8px">
+            <div class="figure">
+              <b>20x to 119x</b>
+              <span>More expensive per fish in agency staff time alone, across the full plausible range of crew throughput, before vehicles, boats or gear.</span>
+            </div>
+            <div class="figure">
+              <b>$11M+</b>
+              <span>PIT tags alone, as consumables, to mark 3.75 million fish at three dollars each. Before labour, before readers, and a tag only reports when that one fish meets someone carrying one.</span>
+            </div>
+            <div class="figure">
+              <b>$0</b>
+              <span>Marginal cost of the next observation. The angler is already standing in the river, and already bought the licence.</span>
+            </div>
+          </div>
+
+          <p class="small" style="max-width: 74ch">
+            These comparisons are deliberately like for like on the photographic
+            record only. They are not a claim that this replaces standardised
+            survey work, which answers different questions. They are a claim that
+            no agency budget could buy this volume of individually identified
+            observations any other way, and that the licence revenue already
+            being collected is what makes it possible.
+          </p>
+        </div>
+      </section>
+
+      <section class="band band--stone" id="funding">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Funding pathways</p>
+            <h2>Where we think this fits, including where it does not.</h2>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Sport Fish Restoration</h3>
+              <p class="small">
+                The closest fit. Dingell-Johnson and Wallop-Breaux excise
+                revenue, apportioned to state agencies, supports fisheries
+                research, management and aquatic education, at a 75 to 25 federal
+                to non-federal match. This is angler money returned to angler
+                data.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>State Wildlife Grants</h3>
+              <p class="small">
+                Applicable where the target is a Species of Greatest
+                Conservation Need. Greenback cutthroat monitoring is the obvious
+                candidate.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__mark"></div>
+              <h3>Citizen science funds</h3>
+              <p class="small">
+                The federal Citizen Science Fund is a strong thematic match at
+                smaller scale and requires a partnership with a federal unit. NSF
+                informal STEM learning programmes fund public participation in
+                research at programme scale.
+              </p>
+            </div>
+            
+          </div>
+          <div class="callout">
+            <p>
+              <b>What we are not asking for.</b> No exclusivity, no ownership of
+              the resulting data, and no requirement that any agency adopt the
+              software. If the validation fails, the finding is published and the
+              programme stops.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="shell stack stack--loose">
+          <div class="stack stack--tight">
+            <p class="eyebrow">Open data</p>
+            <h2>Public money, public record.</h2>
+          </div>
+          <div class="row">
+            <div class="stack">
+              <ul class="ticks">
+                <li>Records released under an open licence on a fixed schedule, in a documented schema, with a stable API</li>
+                <li>Public waters published at full spatial resolution; private waters published at reach resolution only, with the landowner's participation being voluntary</li>
+                <li>Photographs retained as the evidentiary record, with the matching pipeline versioned so any historical identification can be re-run and audited</li>
+                <li>Negative results published. If field accuracy does not clear the bar, that number is the deliverable</li>
+              </ul>
+            </div>
+            <div class="stack">
+              <div class="card">
+                <div class="card__mark"></div>
+                <h3>Why location needs care</h3>
+                <p class="small">
+                  A public dataset of exactly where large trout are caught is
+                  also a map for anyone who wants to remove them. Spatial
+                  precision is a conservation decision, not a technical default,
+                  and it is why private participation is at reach resolution and
+                  why precise coordinates stay with the managing agency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="band band--stone" id="references">
+        <div class="shell doc" style="max-width: 860px; padding-block: 0">
+          <p class="eyebrow">References</p>
+          <h2 style="margin-top: 10px">Everything cited on this page.</h2>
+          <p>
+            Every figure quoted above is drawn from one of these. Where a number
+            is our own estimate rather than a published finding, it is labelled
+            as an assumption in the text.
+          </p>
+
+          <h3>Photographic identification of individual fish</h3>
+          <ul>
+            <li>
+              Photo Identification of Individual <i>Salmo trutta</i> Based on Deep
+              Learning. <i>Applied Sciences</i> 11(19):9039, 2021.
+              <a href="https://doi.org/10.3390/app11199039">doi:10.3390/app11199039</a>.
+              Brown trout identified from video at 94.6% precision and 74.3%
+              recall; datasets NINA204 and TROUT39 (39 fish, 288 frames).
+            </li>
+            <li>
+              Colihueque N, Estay F (2025). Photo-identification of individual
+              rainbow trout, <i>Oncorhynchus mykiss</i>, using the flank spot
+              pattern. <i>Acta Ichthyologica et Piscatoria</i> 55:181&ndash;190.
+              <a href="https://doi.org/10.3897/aiep.55.151044">doi:10.3897/aiep.55.151044</a>.
+              Wild (n=56) and farmed (n=45) populations; perfect first-rank
+              recognition; 75% of two-year-old fish rematched at three years.
+            </li>
+            <li>
+              Automatic identification of individual Atlantic salmon
+              (<i>Salmo salar</i>) by dot skin pattern.
+              <i>Scientific Reports</i> 11, 2021.
+              <a href="https://www.nature.com/articles/s41598-021-96476-4">s41598-021-96476-4</a>.
+              328 individuals at 100% accuracy; stability confirmed over six
+              months; concludes the method is a non-invasive substitute for
+              tagging.
+            </li>
+          </ul>
+
+          <h3>Identification beyond spotted salmonids</h3>
+          <ul>
+            <li>
+              Huntingford FA, Bor&ccedil;ato FL, Mesquita FO (2013). Identifying
+              individual common carp <i>Cyprinus carpio</i> using scale pattern.
+              <i>Journal of Fish Biology</i> 83:1453&ndash;1458.
+              <a href="https://doi.org/10.1111/jfb.12246">doi:10.1111/jfb.12246</a>.
+              Reported at 95.76% accuracy on 15 fish.
+            </li>
+            <li>
+              Hirsch PE, Eckmann R (2015). Individual identification of Eurasian
+              perch <i>Perca fluviatilis</i> by means of their stripe patterns.
+              <i>Limnologica</i> 54:1&ndash;4.
+              <a href="https://doi.org/10.1016/j.limno.2015.07.003">doi:10.1016/j.limno.2015.07.003</a>.
+            </li>
+            <li>
+              Gifford SM, Mayhood D (2014). Natural marks for identifying
+              individual fish in small populations of at-risk westslope cutthroat
+              trout. Wild Trout Symposium XI, Bozeman MT.
+            </li>
+          </ul>
+
+          <h3>Survey effort, capture efficiency and cost</h3>
+          <ul>
+            <li>
+              Watz J et al. Detection and apparent survival of PIT-tagged stream
+              fish in winter. <i>Ecology and Evolution</i>.
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4797160/">PMC4797160</a>.
+              393 fish PIT-tagged in a single autumn electrofishing campaign on a
+              550 m reach by a two-person team; trout density 28.5&ndash;90.4 per
+              100 m.
+            </li>
+            <li>
+              Movement and capture efficiency of radio-tagged salmonids sampled by
+              electrofishing. USDA Forest Service.
+              <a href="https://research.fs.usda.gov/treesearch/41321">treesearch/41321</a>.
+              First-pass capture efficiency about 46%; catchability 0.23 for
+              backpack units against 0.64 for towed barges.
+            </li>
+            <li>
+              Evans NT et al. (2017). Comparative Cost and Effort of Fish
+              Distribution Detection via Environmental DNA Analysis and
+              Electrofishing. <i>Fisheries</i> 42(2).
+              <a href="https://doi.org/10.1080/03632415.2017.1276329">doi:10.1080/03632415.2017.1276329</a>.
+            </li>
+          </ul>
+
+          <h3>Open questions in the field</h3>
+          <ul>
+            <li>
+              Review of individual identification methods in aquaculture and
+              fisheries. <i>Reviews in Aquaculture</i>, 2025.
+              <a href="https://onlinelibrary.wiley.com/doi/10.1111/raq.70078">doi:10.1111/raq.70078</a>.
+              Long-term and large-population performance remain open research
+              gaps.
+            </li>
+          </ul>
+
+          <h3>Our own assumptions, stated</h3>
+          <div class="table-wrap">
+            <table class="budget">
+              <thead><tr><th>Assumption</th><th>Value used</th></tr></thead>
+              <tbody>
+                <tr><td>Colorado fishing licences in circulation</td><td>~1,000,000</td></tr>
+                <tr><td>Catches logged per participating angler per year</td><td>15</td></tr>
+                <tr><td>Fisheries technician salary plus 25% fringe</td><td>$68,750</td></tr>
+                <tr><td>Field days per technician per year</td><td>110</td></tr>
+                <tr><td>Fish handled per technician-day</td><td>Range, 25 to 150</td></tr>
+                <tr><td>PIT tag unit cost, in quantity</td><td>$3.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">
+            None of these are published findings. They are our estimates, shown so
+            they can be challenged and replaced with agency figures. The
+            cost-per-record conclusion holds across the full range of every one of
+            them.
+          </p>
+        </div>
+      </section>
+
+      <section class="band band--forest" id="ask">
+        <div class="shell stack">
+          <p class="eyebrow">The ask</p>
+          <h2>Fund year one.</h2>
+          <p class="lede">
+            $166,860 puts one engineer on this full time for a year, instruments
+            three study reaches with PIT ground truth, and answers the question
+            the literature has not: whether flank-pattern identification works on
+            photographs taken by an angler standing in a river. That answer is
+            useful to Colorado whether it is yes or no.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="mailto:hello@waldenhollow.app">hello@waldenhollow.app</a>
+            <a class="btn btn--ghost" href="index.html" style="border-color: #2a3f32; color: #ece7dc">The club product</a>
+          </div>
+          <p class="small" style="color: #7f8c83">
+            The platform already exists and is in use on a Colorado River reach.
+            This proposal funds the science and the public release, not the
+            invention of the software.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer__base" style="margin-top: 0; border-top: 0; padding-top: 0">
+          <span>&copy; 2026 Walden Hollow.</span>
+          <span>
+            <a href="index.html">Home</a> &middot;
+            <a href="privacy.html">Privacy</a> &middot;
+            <a href="support.html">Support</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
