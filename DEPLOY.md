@@ -12,11 +12,43 @@ is the site, and opening it in a browser is an accurate preview of production.
 
 `README.md` shows on the repository page; `index.html` is what Pages serves. The two audiences, an engineer reading the repo and a club board reading the site, each land on the right one.
 
-### A custom domain, later
+### A custom domain
 
-Add a `CNAME` file containing the domain, point a DNS `CNAME` record at
-`<user>.github.io`, and tick *Enforce HTTPS*. Nothing in the markup assumes a
-path, so this works without edits.
+Do this **before** the site is sent to anyone, and before the privacy policy and
+support URLs go into App Store Connect. Nothing in the markup assumes a path, so
+it works without edits.
+
+1. In **Settings > Pages > Custom domain**, enter the hostname. GitHub writes a
+   `CNAME` file to the repo root; leave it alone after that.
+2. DNS, depending on which form you want as primary:
+   - `www.example.com`: one `CNAME` record pointing at `<user>.github.io`.
+   - Bare `example.com`: four `A` records at GitHub's apex IPs (and the matching
+     `AAAA` records), or an `ALIAS`/`ANAME` if the registrar supports one.
+     GitHub's own advice is to make `www` primary and redirect the apex to it.
+3. Wait for **Enforce HTTPS** to become tickable, then tick it. It stays greyed
+   out until DNS resolves and a Let's Encrypt certificate is issued, usually
+   minutes. Do not publish the URL to Apple before this, or the privacy policy
+   gets fetched over plain HTTP.
+
+### Changing the domain later
+
+A Pages site serves **one** custom domain at a time. Repointing it at a new
+domain does not keep the old one working: the old hostname stops resolving to
+this site the moment `CNAME` changes.
+
+By then the old URL exists in places you do not control, including the privacy
+policy and support URLs held in App Store Connect and Google Play, and any link
+mailed to a club. So when the product name is settled and the domain moves:
+
+- Keep renewing the old domain. About $12/yr.
+- Set a **301 redirect** from it to the new one. Registrar URL forwarding or a
+  Cloudflare redirect rule both do this for free, and neither needs a server.
+- Update the privacy policy and support URLs in both store listings. Those are
+  metadata and can be edited without submitting a new build.
+
+Note that the club's own domain may not be a placeholder at all. That club really
+is Walden Hollow and will keep running this app, so `waldenhollow.com` can stay
+pointed at the club site permanently while the product name gets its own domain.
 
 ---
 
