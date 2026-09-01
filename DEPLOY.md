@@ -54,21 +54,47 @@ pointed at the club site permanently while the product name gets its own domain.
 
 ## Before it goes public
 
-Search the files for `TODO`. There are four, and every one is a placeholder
-that must not ship:
+**All four placeholders are filled** as of 1 September 2026. The check is kept
+because the failure it catches is silent: a placeholder ships, and the first
+person to notice is a reviewer or a member.
 
-| Where | What |
-|---|---|
-| `index.html`, `privacy.html`, `support.html` | `hello@waldenhollow.app`, the real support address |
-| `privacy.html` | `[LEGAL ENTITY NAME]` and `[ADDRESS]` |
-| `privacy.html` | `[DATE]`, the effective date |
+```bash
+grep -rn "TODO\|\[LEGAL ENTITY\|\[ADDRESS\]\|\[DATE\]\|waldenhollow\.app" *.html
+```
+
+That must return nothing. `waldenhollow.app` is on the list because
+`hello@waldenhollow.app` was never a real address and appeared sixteen times
+across four pages.
+
+**No postal address is published, deliberately.** The policy names Chad
+Zimmerman as the operator and gives an email as the contact. GDPR and CCPA ask
+for the operator's identity and a way to reach them, and an email is normally
+accepted as that; Apple does not require a postal address. Putting a street
+address on a public page is permanent and gets scraped, so it is not there
+unless there is a reason for it. If a client, an app store or a lawyer ever asks
+for one, add it here rather than deciding it is required by default.
 
 Also confirm the **pricing** in `index.html` is what you actually intend to
 charge publicly. It is written as `$5` per member per month, billed to the club,
 with setup quoted separately.
 
+**And check the pages balance**, because an unclosed tag nests everything after
+it one level deeper and looks fine until it does not:
+
 ```bash
-grep -rn "TODO\|\[LEGAL ENTITY\|\[ADDRESS\]\|\[DATE\]" *.html
+python3 - <<'EOF'
+import re, glob
+TAGS = ['div', 'section', 'details', 'p', 'ul', 'li', 'main', 'nav', 'header', 'footer']
+for f in sorted(glob.glob('*.html')):
+    s = open(f).read()
+    bad = []
+    for t in TAGS:
+        opened = len(re.findall('<' + t + r'[\s>]', s))
+        closed = len(re.findall('</' + t + '>', s))
+        if opened != closed:
+            bad.append(t + ' ' + str(opened) + '/' + str(closed))
+    print(f, 'OK' if not bad else 'UNBALANCED: ' + ', '.join(bad))
+EOF
 ```
 
 ## Screenshots
