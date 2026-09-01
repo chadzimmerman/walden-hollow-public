@@ -47,8 +47,21 @@ mailed to a club. So when the product name is settled and the domain moves:
   metadata and can be edited without submitting a new build.
 
 Note that the club's own domain may not be a placeholder at all. That club really
-is Walden Hollow and will keep running this app, so `waldenhollow.com` can stay
-pointed at the club site permanently while the product name gets its own domain.
+is Walden Hollow and will keep running this app, so a club domain can stay
+pointed at the club site permanently while the product name gets its own.
+
+**Note: `waldenhollow.com` is not ours.** It is registered to an unrelated third
+party through Squarespace, created October 2025. This was found the hard way,
+after `demo@waldenhollow.com` had been published as the demo credential in two
+store listings and on three pages of this site. Nothing leaked — the app
+compares that string internally and sends no mail — but it meant publishing
+somebody else's mailbox in our own metadata. The demo address is now
+`demo@example.com`, which RFC 2606 reserves and IANA holds, so it can never
+belong to anyone.
+
+**Check the registry before putting a domain in anything public.** `whois` takes
+five seconds; the app being named after something is not evidence of owning the
+matching domain.
 
 ---
 
@@ -59,7 +72,7 @@ because the failure it catches is silent: a placeholder ships, and the first
 person to notice is a reviewer or a member.
 
 ```bash
-grep -rn "TODO\|\[LEGAL ENTITY\|\[ADDRESS\]\|\[DATE\]\|waldenhollow\.app" *.html
+grep -rn "TODO\|\[LEGAL ENTITY\|\[ADDRESS\]\|\[DATE\]\|waldenhollow\.app\|@waldenhollow\.com" *.html
 ```
 
 That must return nothing. `waldenhollow.app` is on the list because
