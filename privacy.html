@@ -31,8 +31,7 @@
       <p class="eyebrow">Legal</p>
       <h1 style="font-size: clamp(2.1rem, 4vw, 3rem)">Privacy Policy</h1>
       <p class="small" style="margin-top: 14px">
-        <!-- TODO: set on publication, and update whenever this changes. -->
-        Last updated: <strong>[DATE]</strong>
+        Last updated: <strong>1 September 2026</strong>
       </p>
 
       <p>
@@ -53,10 +52,11 @@
 
       <h2>Who we are</h2>
       <p>
-        <!-- TODO: replace with the registered entity and address before publishing. -->
-        Walden Hollow is operated by <strong>[LEGAL ENTITY NAME]</strong>,
-        <strong>[ADDRESS]</strong>. For any privacy question, write to
-        <a href="mailto:hello@waldenhollow.app">hello@waldenhollow.app</a>.
+        Walden Hollow is built and operated by <strong>Chad Zimmerman</strong>, in
+        Colorado, United States. For any privacy question &mdash; including a
+        request to see, correct or remove your data &mdash; write to
+        <a href="mailto:chadzimmerman.codes@gmail.com">chadzimmerman.codes@gmail.com</a>.
+        That address is read by a person, and it is the fastest way to reach one.
       </p>
 
       <h2>What we collect, and why</h2>
@@ -176,32 +176,70 @@
       <h2 id="deletion">Deleting your account</h2>
       <div class="callout">
         <p>
-          <strong>In the app:</strong> Settings → Account → <strong>Delete my
-          account</strong>. You will be asked to confirm. Your profile,
-          photographs, and personal details are deleted, and the deletion cannot
-          be undone.
+          <strong>In the app:</strong> Settings → <strong>Delete My Account</strong>.
+          The app shows you exactly what follows and asks for your password before
+          anything happens. It cannot be undone.
+        </p>
+      </div>
+      <p>What is deleted:</p>
+      <ul>
+        <li>Your sign-in, so you cannot open the app again.</li>
+        <li>Your phone number and contact email, removed from the club roster.</li>
+        <li>Your profile photograph.</li>
+      </ul>
+      <p>What is not, and this is a genuine trade-off worth stating plainly:</p>
+      <div class="callout">
+        <p>
+          <strong>The fish you logged stay in the club's record, with your name on
+          them</strong>, and so do the photographs you attached to them.
         </p>
       </div>
       <p>
-        One thing is worth being clear about, because it is a genuine trade-off:
-        the club's catch record is the club's, not just yours. When you delete
-        your account, the catches you logged remain in the club's fishery record
-        but are <strong>de-identified</strong>, so they are no longer attributed to
-        you or linked to your account. This keeps the scientific record of the
-        river intact while removing you from it.
+        That is deliberate rather than an oversight. A club's catch log is its
+        account of its own water over years, and a catch with the angler removed
+        is not an anonymous catch, it is a hole in the record. It is the same
+        reason a member whose access an administrator ends keeps their name on
+        their catches. The app says all of this on screen, before it asks for your
+        password, because it is not something we can offer to undo afterwards.
       </p>
       <p>
-        If you would rather your catches were removed entirely, or you cannot get
-        into the app to delete the account yourself, email
-        <a href="mailto:hello@waldenhollow.app">hello@waldenhollow.app</a> and we
-        will do it. We will confirm when it is done.
+        If you would rather your catches and their photographs were removed
+        entirely, ask. Email
+        <a href="mailto:chadzimmerman.codes@gmail.com">chadzimmerman.codes@gmail.com</a>,
+        and we will do it and confirm when it is done. That is a request we honour;
+        it is simply not what the in-app button does, and we would rather say so
+        than have you find out later.
+      </p>
+      <p>
+        One technical detail, because it affects what deletion can mean.
+        Photographs are served through links that carry their own access token.
+        Removing someone's access stops them browsing or fetching new photographs;
+        it does not reach back and invalidate a link somebody already holds. We
+        will not tell you otherwise.
+      </p>
+
+      <h2 id="demo">The demo account</h2>
+      <p>
+        The app publishes a demo sign-in &mdash;
+        <code>demo@waldenhollow.com</code>, password <code>password</code> &mdash;
+        so that anyone can see what the app does without an account. Both app
+        stores require a working sign-in for review, and there is no public
+        registration.
+      </p>
+      <p>
+        Publishing a password is safe here because <strong>the account does not
+        exist</strong>. There is no user record and no stored data behind it: the
+        app recognises those credentials before it contacts any server, and then
+        runs on invented sample data built into the app itself. A demo session
+        never signs in to anything, never reads a real club's records, and saves
+        nothing. Whatever a demo visitor does is gone when they close the app.
       </p>
 
       <h2>Your rights</h2>
       <p>
         You can ask us for a copy of your data, ask us to correct it, or ask us to
         delete it. Write to
-        <a href="mailto:hello@waldenhollow.app">hello@waldenhollow.app</a> and we
+        <a href="mailto:chadzimmerman.codes@gmail.com">chadzimmerman.codes@gmail.com</a> and we
         will respond within 30 days. Depending on where you live, you may have
         additional rights under laws such as the GDPR or the CCPA; we apply the
         same standard to everyone regardless.
